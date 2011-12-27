@@ -21,6 +21,9 @@
 		1373255E14A956D800FA993D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373253C14A956D700FA993D /* Foundation.framework */; };
 		1373256614A956D800FA993D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1373256414A956D800FA993D /* InfoPlist.strings */; };
 		1373256914A956D800FA993D /* SwapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373256814A956D800FA993D /* SwapperTests.m */; };
+		1373257614A9577A00FA993D /* SiteSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257514A9577A00FA993D /* SiteSwap.m */; };
+		1373257714A9577A00FA993D /* SiteSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257514A9577A00FA993D /* SiteSwap.m */; };
+		1373257C14A957A700FA993D /* SiteSwapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257A14A957A600FA993D /* SiteSwapTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +41,26 @@
 		1373253A14A956D700FA993D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1373253C14A956D700FA993D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1373253E14A956D700FA993D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1373254214A956D700FA993D /* Swapper-Info.plist */ = {isa = PBXFileReference; path = "Swapper-Info.plist"; sourceTree = "<group>"; };
+		1373254214A956D700FA993D /* Swapper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Swapper-Info.plist"; sourceTree = "<group>"; };
 		1373254414A956D700FA993D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1373254614A956D700FA993D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1373254814A956D700FA993D /* Swapper-Prefix.pch */ = {isa = PBXFileReference; path = "Swapper-Prefix.pch"; sourceTree = "<group>"; };
-		1373254914A956D700FA993D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1373254814A956D700FA993D /* Swapper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swapper-Prefix.pch"; sourceTree = "<group>"; };
+		1373254914A956D700FA993D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1373254A14A956D700FA993D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1373254D14A956D700FA993D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1373255014A956D700FA993D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		1373255214A956D700FA993D /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		1373255214A956D700FA993D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1373255314A956D700FA993D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1373255A14A956D800FA993D /* SwapperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwapperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373255B14A956D800FA993D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1373256314A956D800FA993D /* SwapperTests-Info.plist */ = {isa = PBXFileReference; path = "SwapperTests-Info.plist"; sourceTree = "<group>"; };
+		1373256314A956D800FA993D /* SwapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwapperTests-Info.plist"; sourceTree = "<group>"; };
 		1373256514A956D800FA993D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1373256714A956D800FA993D /* SwapperTests.h */ = {isa = PBXFileReference; path = SwapperTests.h; sourceTree = "<group>"; };
+		1373256714A956D800FA993D /* SwapperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwapperTests.h; sourceTree = "<group>"; };
 		1373256814A956D800FA993D /* SwapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwapperTests.m; sourceTree = "<group>"; };
+		1373257414A9577A00FA993D /* SiteSwap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SiteSwap.h; path = Models/SiteSwap.h; sourceTree = "<group>"; };
+		1373257514A9577A00FA993D /* SiteSwap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiteSwap.m; path = Models/SiteSwap.m; sourceTree = "<group>"; };
+		1373257914A957A600FA993D /* SiteSwapTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteSwapTest.h; sourceTree = "<group>"; };
+		1373257A14A957A600FA993D /* SiteSwapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteSwapTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +120,8 @@
 		1373254014A956D700FA993D /* Swapper */ = {
 			isa = PBXGroup;
 			children = (
+				1373257314A9571B00FA993D /* Views */,
+				1373257214A9570600FA993D /* Models */,
 				1373254914A956D700FA993D /* AppDelegate.h */,
 				1373254A14A956D700FA993D /* AppDelegate.m */,
 				1373254C14A956D700FA993D /* MainStoryboard_iPhone.storyboard */,
@@ -138,6 +147,7 @@
 		1373256114A956D800FA993D /* SwapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				1373257814A9578600FA993D /* Models */,
 				1373256714A956D800FA993D /* SwapperTests.h */,
 				1373256814A956D800FA993D /* SwapperTests.m */,
 				1373256214A956D800FA993D /* Supporting Files */,
@@ -152,6 +162,32 @@
 				1373256414A956D800FA993D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1373257214A9570600FA993D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1373257414A9577A00FA993D /* SiteSwap.h */,
+				1373257514A9577A00FA993D /* SiteSwap.m */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1373257314A9571B00FA993D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1373257814A9578600FA993D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1373257914A957A600FA993D /* SiteSwapTest.h */,
+				1373257A14A957A600FA993D /* SiteSwapTest.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +301,7 @@
 				1373254714A956D700FA993D /* main.m in Sources */,
 				1373254B14A956D700FA993D /* AppDelegate.m in Sources */,
 				1373255414A956D700FA993D /* ViewController.m in Sources */,
+				1373257614A9577A00FA993D /* SiteSwap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1373256914A956D800FA993D /* SwapperTests.m in Sources */,
+				1373257714A9577A00FA993D /* SiteSwap.m in Sources */,
+				1373257C14A957A700FA993D /* SiteSwapTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +433,6 @@
 		1373257014A956D800FA993D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swapper.app/Swapper";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -403,7 +441,6 @@
 				GCC_PREFIX_HEADER = "Swapper/Swapper-Prefix.pch";
 				INFOPLIST_FILE = "SwapperTests/SwapperTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -411,7 +448,6 @@
 		1373257114A956D800FA993D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swapper.app/Swapper";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -420,7 +456,6 @@
 				GCC_PREFIX_HEADER = "Swapper/Swapper-Prefix.pch";
 				INFOPLIST_FILE = "SwapperTests/SwapperTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
