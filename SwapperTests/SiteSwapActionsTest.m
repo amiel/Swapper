@@ -83,6 +83,16 @@
   [self verifyState:NO withCurrent:0 andFirst:0 andSecond:0 andThird:0];
 }
 
+- (void)testFiveActions {
+  [self setActions:@"01220"];
+  [self verifyState:YES withCurrent:2 andFirst:3 andSecond:0 andThird:2];
+}
+
+- (void)testIncorrectThenCorrect {
+  [self setActions:@"012001220"];
+  [self verifyState:YES withCurrent:2 andFirst:3 andSecond:0 andThird:2];
+}
+
 @end
 
 
