@@ -14,6 +14,7 @@
 
 @interface SiteSwapActionsTest : SiteSwapTest {
   NSString* actions;
+  BOOL lastReturn;
 }
 
 - (void)setActions:(NSString*)input;

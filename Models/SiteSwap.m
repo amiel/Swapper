@@ -32,6 +32,12 @@
   return [_pattern length];
 }
 
+- (void)reset {
+  _current = 0;
+  [_things enumerateObjectsUsingBlock:^(SiteSwapThing* thing, NSUInteger i, BOOL* stop) {
+    [thing reset];
+  }];
+}
 
 - (NSUInteger)currentThrow {
   NSString* c = [_pattern substringWithRange:NSMakeRange(_current, 1)];
@@ -44,10 +50,10 @@
     [_things enumerateObjectsUsingBlock:^(SiteSwapThing* thing, NSUInteger i, BOOL* stop) {
       [thing drops];
     }];
-    //     _current = (_current + 1) % self.period;
-    ++_current;
+    _current = (_current + 1) % self.period;
     return YES;
   } else {
+    [self reset];
     return NO;
   }
 }
