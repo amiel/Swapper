@@ -127,7 +127,6 @@
 		1373254014A956D700FA993D /* Swapper */ = {
 			isa = PBXGroup;
 			children = (
-				1373257314A9571B00FA993D /* Views */,
 				1373257214A9570600FA993D /* Models */,
 				1373254914A956D700FA993D /* AppDelegate.h */,
 				1373254A14A956D700FA993D /* AppDelegate.m */,
@@ -181,13 +180,6 @@
 			);
 			name = Models;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		1373257314A9571B00FA993D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		1373257814A9578600FA993D /* Models */ = {
@@ -493,6 +485,7 @@
 				1373256E14A956D800FA993D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1373256F14A956D800FA993D /* Build configuration list for PBXNativeTarget "SwapperTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +494,7 @@
 				1373257114A956D800FA993D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

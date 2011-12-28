@@ -75,7 +75,6 @@
                        @"Expected pattern to erturn 441");
 }
 
-
 - (void)testPeriod {
   STAssertEquals(5, (int)site_swap.period,
                  @"Expected period to be 5 was %d", site_swap.period);
@@ -84,8 +83,8 @@
 
 - (void)testNumberOfThings {
   int n_things = [site_swap.things count];
-  STAssertEquals(5, n_things,
-                 @"Expected there to be 5 things (was %d)", n_things);
+  STAssertEquals(4, n_things,
+                 @"Expected there to be 4 things (was %d)", n_things);
 }
 
 

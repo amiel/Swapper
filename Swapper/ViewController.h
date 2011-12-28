@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SiteSwap.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) SiteSwap* site_swap;
+@property (nonatomic, strong) IBOutlet UILabel* patternLabel;
+@property (nonatomic, strong) IBOutlet UILabel* statusLabel;
+@property (nonatomic, strong) NSArray* buttons;
 @end
