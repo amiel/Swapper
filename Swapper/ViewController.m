@@ -50,8 +50,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.patternLabel.text = @"55514";
-  self.site_swap = [[SiteSwap alloc] initWithPattern:@"55514"];
+  // Recommended: 441, 55514, 531, 543
+  NSString* pattern = @"534";
+  
+  self.patternLabel.text = pattern;
+  self.site_swap = [[SiteSwap alloc] initWithPattern:pattern];
   NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:_site_swap.period];
   [_site_swap.things enumerateObjectsUsingBlock:^(SiteSwapThing* thing, NSUInteger i, BOOL* stop) {
     UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
