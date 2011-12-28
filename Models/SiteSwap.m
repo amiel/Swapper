@@ -68,15 +68,16 @@
   NSUInteger total = 0;
   for (int i = 0; i < self.period; ++i) {
     NSString* c = [_pattern substringWithRange:NSMakeRange(i, 1)];
-    NSLog(@"c: %@ Total: %d", c, total);
+//    NSLog(@"c: %@ Total: %d", c, total);
     total += (NSUInteger)[c integerValue];
   }
   
+  // TODO: Refactor
   NSUInteger n_things = total / self.period;
   if (total % self.period != 0)
     [NSException raise:@"Invalid siteswap" format:@"Siteswap pattern %@ is not valid", _pattern];
   
-  NSLog(@"total: %d n_things: %d", total, n_things);
+//  NSLog(@"total: %d n_things: %d", total, n_things);
   NSMutableArray* things = [NSMutableArray arrayWithCapacity:n_things];
   for (int i = 0; i < n_things; ++i) {
     [things addObject:[[SiteSwapThing alloc] init]];

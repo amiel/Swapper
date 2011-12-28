@@ -89,3 +89,22 @@
 
 
 @end
+
+@implementation SiteSwapInvalidTest
+
+- (void)setUp {
+  // Don't initialize the siteswap here because it should raise an error
+}
+
+- (NSString*)site_swap_pattern {
+  return @"533";
+}
+
+- (void)testInvalid {
+  STAssertThrows(site_swap = [[SiteSwap alloc] initWithPattern:self.site_swap_pattern],
+                 @"Expect initializing an invalid siteswap to throw an error");
+}
+
+
+
+@end

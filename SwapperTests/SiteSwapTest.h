@@ -30,3 +30,5 @@
 @interface SiteSwap55514Test : SiteSwapTest <SiteSwapTestWithPattern>
 @end
 
+@interface SiteSwapInvalidTest : SiteSwapTest <SiteSwapTestWithPattern>
+@end

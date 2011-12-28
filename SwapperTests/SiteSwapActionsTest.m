@@ -130,6 +130,11 @@
   [self verifyState:YES withCurrent:2 andValues:0, 2, 1, 3];
 }
 
+- (void)testFailureAfterManyMoreActions {
+  [self setActions:@"012310213012313"];
+  [self verifyState:NO withCurrent:0 andValues:0, 0, 0, 0];
+}
+
 @end
 
 
