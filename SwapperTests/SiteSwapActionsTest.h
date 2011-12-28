@@ -19,6 +19,9 @@
 
 - (void)setActions:(NSString*)input;
 
+- (void)verifyState:(BOOL)expectedReturn
+        withCurrent:(NSUInteger)expectedCurrent
+          andValues:(NSUInteger)firstValue, ...;
 @end
 
 @interface SiteSwap441ActionsTest : SiteSwapActionsTest <SiteSwapTestWithPattern>
@@ -26,4 +29,8 @@
 
 
 @interface SiteSwap55514ActionsTest : SiteSwapActionsTest <SiteSwapTestWithPattern>
+@end
+
+
+@interface SiteSwap534ActionsTest : SiteSwapActionsTest <SiteSwapTestWithPattern>
 @end

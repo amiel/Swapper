@@ -19,6 +19,35 @@
   }
 }
 
+
+
+- (void)verifyState:(BOOL)expectedReturn
+        withCurrent:(NSUInteger)expectedCurrent
+          andValues:(NSUInteger)firstValue, ... {
+
+  if (expectedReturn) {
+    STAssertTrue(lastReturn, @"Expect the lastReturn to be true");
+    STAssertTrue(site_swap.isValid, @"Expect site swap to be valid");
+  } else {
+    STAssertFalse(lastReturn, @"Expect the lastReturn to be false");
+    STAssertFalse(site_swap.isValid, @"Expect site swap not to be valid");
+  }
+
+  NSUInteger current = site_swap.current;
+  STAssertEquals(current, expectedCurrent, nil);
+
+  va_list args;
+  va_start(args, firstValue);
+  NSUInteger expectedValue = firstValue;
+  for (int i = 0; i < [site_swap.things count]; ++i) {
+    SiteSwapThing* thing = [site_swap.things objectAtIndex:i];
+    STAssertEquals([thing current], expectedValue,
+                   @"Expect value of object %d to be %d (was %d)", i, expectedValue, [thing current]);
+    expectedValue = va_arg(args, NSUInteger);
+  }
+  va_end(args);
+}
+
 @end
 
 
@@ -28,69 +57,41 @@
   return @"441";
 }
 
-- (void)verifyState:(BOOL)expectedReturn
-        withCurrent:(NSUInteger)expectedCurrent
-           andFirst:(NSUInteger)expectedFirstValue
-          andSecond:(NSUInteger)expectedSecondValue
-           andThird:(NSUInteger)expectedThirdValue {
-  
-  if (expectedReturn) {
-    STAssertTrue(lastReturn, @"Expect the lastReturn to be true");
-    STAssertTrue(site_swap.isValid, @"Expect site swap to be valid");
-  } else {
-    STAssertFalse(lastReturn, @"Expect the lastReturn to be false");
-    STAssertFalse(site_swap.isValid, @"Expect site swap not to be valid");
-  }
-  
-  NSUInteger current = site_swap.current;
-  STAssertEquals(expectedCurrent, current, nil);
-  
-  SiteSwapThing* first = [site_swap.things objectAtIndex:0];  
-  STAssertEquals(expectedFirstValue, [first current], nil);
-  
-  SiteSwapThing* second = [site_swap.things objectAtIndex:1];
-  STAssertEquals(expectedSecondValue, [second current], nil);
-  
-  SiteSwapThing* third = [site_swap.things objectAtIndex:2];
-  STAssertEquals(expectedThirdValue, [third current], nil);
-}
-
-
 - (void)testOneAction {
   [self setActions:@"0"];
-  [self verifyState:YES withCurrent:1 andFirst:3 andSecond:0 andThird:0];
+  [self verifyState:YES withCurrent:1 andValues:3, 0, 0];
 }
 
 - (void)testTwoActions {
   [self setActions:@"01"];
-  [self verifyState:YES withCurrent:2 andFirst:2 andSecond:3 andThird:0];
+  [self verifyState:YES withCurrent:2 andValues:2, 3, 0];
 }
 
 
 - (void)testThreeActions {
   [self setActions:@"012"];
-  [self verifyState:YES withCurrent:0 andFirst:1 andSecond:2 andThird:0];
+  [self verifyState:YES withCurrent:0 andValues:1, 2, 0];
 }
 
 - (void)testFourActions {
   [self setActions:@"0122"];
-  [self verifyState:YES withCurrent:1 andFirst:0 andSecond:1 andThird:3];
+  [self verifyState:YES withCurrent:1 andValues:0, 1, 3];
 }
 
 
 - (void)testFourActionsIncorrect {
   [self setActions:@"0120"];
-  [self verifyState:NO withCurrent:0 andFirst:0 andSecond:0 andThird:0];
+  [self verifyState:NO withCurrent:0 andValues:0, 0, 0];
 }
 
 - (void)testFiveActions {
   [self setActions:@"01220"];
-  [self verifyState:YES withCurrent:2 andFirst:3 andSecond:0 andThird:2];
+  [self verifyState:YES withCurrent:2 andValues:3, 0, 2];
 }
 
 - (void)testIncorrectThenCorrect {
   [self setActions:@"012001220"];
-  [self verifyState:YES withCurrent:2 andFirst:3 andSecond:0 andThird:2];
+  [self verifyState:YES withCurrent:2 andValues:3, 0, 2];
 }
 
 @end
@@ -104,3 +105,31 @@
 }
 
 @end
+
+
+@implementation SiteSwap534ActionsTest
+
+- (NSString*)site_swap_pattern {
+  return @"534";
+}
+
+
+- (void)testOneAction {
+  [self setActions:@"0"];
+  [self verifyState:YES withCurrent:1 andValues:4, 0, 0, 0];
+}
+
+
+- (void)testManyActions {
+  [self setActions:@"012310213"];
+  [self verifyState:YES withCurrent:0 andValues:0, 1, 2, 3];
+}
+
+- (void)testManyMoreActions {
+  [self setActions:@"01231021301231"];
+  [self verifyState:YES withCurrent:2 andValues:0, 2, 1, 3];
+}
+
+@end
+
+
