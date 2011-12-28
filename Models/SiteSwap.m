@@ -15,13 +15,14 @@
 
 @implementation SiteSwap
 
-@synthesize current = _current;
+@synthesize current = _current, valid = _valid;
 @synthesize pattern = _pattern, things = _things;
 
 - (id)initWithPattern:(NSString *)pattern {
   if (self = [super init]) {
     _pattern = pattern;
     _current = 0;
+    _valid = YES;
     [self createThings];
   }
   
@@ -33,6 +34,7 @@
 }
 
 - (void)reset {
+  _valid = NO;
   _current = 0;
   [_things enumerateObjectsUsingBlock:^(SiteSwapThing* thing, NSUInteger i, BOOL* stop) {
     [thing reset];
@@ -47,10 +49,13 @@
 - (BOOL)do:(NSUInteger)n {
   SiteSwapThing* thing = [_things objectAtIndex:n];
   if ([thing throws:self.currentThrow]) {
+    
     [_things enumerateObjectsUsingBlock:^(SiteSwapThing* thing, NSUInteger i, BOOL* stop) {
       [thing drops];
     }];
     _current = (_current + 1) % self.period;
+    _valid = YES;
+    
     return YES;
   } else {
     [self reset];

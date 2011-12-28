@@ -13,6 +13,7 @@
 @property (readonly) NSUInteger current;
 @property (readonly, strong) NSString* pattern;
 @property (readonly, strong) NSArray* things;
+@property (readonly, getter = isValid) BOOL valid;
 
 -(id)initWithPattern:(NSString*)pattern;
 

@@ -36,8 +36,10 @@
   
   if (expectedReturn) {
     STAssertTrue(lastReturn, @"Expect the lastReturn to be true");
+    STAssertTrue(site_swap.isValid, @"Expect site swap to be valid");
   } else {
     STAssertFalse(lastReturn, @"Expect the lastReturn to be false");
+    STAssertFalse(site_swap.isValid, @"Expect site swap not to be valid");
   }
   
   NSUInteger current = site_swap.current;
