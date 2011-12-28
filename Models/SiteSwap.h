@@ -8,15 +8,16 @@
 
 
 
-@interface SiteSwap : NSObject {
-  NSString* _pattern;
-  NSArray* _things;
-}
+@interface SiteSwap : NSObject
+
+@property (readonly) NSUInteger current;
+@property (readonly, strong) NSString* pattern;
+@property (readonly, strong) NSArray* things;
 
 -(id)initWithPattern:(NSString*)pattern;
 
--(NSString*)pattern;
 -(NSUInteger)period;
+-(NSUInteger)currentThrow;
 
--(NSArray*)things;
+- (BOOL)do:(NSUInteger)n;
 @end

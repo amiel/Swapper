@@ -24,6 +24,9 @@
 		1373257614A9577A00FA993D /* SiteSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257514A9577A00FA993D /* SiteSwap.m */; };
 		1373257714A9577A00FA993D /* SiteSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257514A9577A00FA993D /* SiteSwap.m */; };
 		1373257C14A957A700FA993D /* SiteSwapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257A14A957A600FA993D /* SiteSwapTest.m */; };
+		1373257F14AA5E0C00FA993D /* SiteSwapThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257E14AA5E0C00FA993D /* SiteSwapThing.m */; };
+		1373258014AA5E0C00FA993D /* SiteSwapThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373257E14AA5E0C00FA993D /* SiteSwapThing.m */; };
+		1373258414AA894F00FA993D /* SiteSwapActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373258214AA894F00FA993D /* SiteSwapActionsTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,10 @@
 		1373257514A9577A00FA993D /* SiteSwap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiteSwap.m; path = Models/SiteSwap.m; sourceTree = "<group>"; };
 		1373257914A957A600FA993D /* SiteSwapTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteSwapTest.h; sourceTree = "<group>"; };
 		1373257A14A957A600FA993D /* SiteSwapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteSwapTest.m; sourceTree = "<group>"; };
+		1373257D14AA5E0C00FA993D /* SiteSwapThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SiteSwapThing.h; path = Models/SiteSwapThing.h; sourceTree = "<group>"; };
+		1373257E14AA5E0C00FA993D /* SiteSwapThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiteSwapThing.m; path = Models/SiteSwapThing.m; sourceTree = "<group>"; };
+		1373258114AA894F00FA993D /* SiteSwapActionsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteSwapActionsTest.h; sourceTree = "<group>"; };
+		1373258214AA894F00FA993D /* SiteSwapActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteSwapActionsTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +176,8 @@
 			children = (
 				1373257414A9577A00FA993D /* SiteSwap.h */,
 				1373257514A9577A00FA993D /* SiteSwap.m */,
+				1373257D14AA5E0C00FA993D /* SiteSwapThing.h */,
+				1373257E14AA5E0C00FA993D /* SiteSwapThing.m */,
 			);
 			name = Models;
 			path = ..;
@@ -186,6 +195,8 @@
 			children = (
 				1373257914A957A600FA993D /* SiteSwapTest.h */,
 				1373257A14A957A600FA993D /* SiteSwapTest.m */,
+				1373258114AA894F00FA993D /* SiteSwapActionsTest.h */,
+				1373258214AA894F00FA993D /* SiteSwapActionsTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -302,6 +313,7 @@
 				1373254B14A956D700FA993D /* AppDelegate.m in Sources */,
 				1373255414A956D700FA993D /* ViewController.m in Sources */,
 				1373257614A9577A00FA993D /* SiteSwap.m in Sources */,
+				1373257F14AA5E0C00FA993D /* SiteSwapThing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,8 @@
 				1373256914A956D800FA993D /* SwapperTests.m in Sources */,
 				1373257714A9577A00FA993D /* SiteSwap.m in Sources */,
 				1373257C14A957A700FA993D /* SiteSwapTest.m in Sources */,
+				1373258014AA5E0C00FA993D /* SiteSwapThing.m in Sources */,
+				1373258414AA894F00FA993D /* SiteSwapActionsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 //
-//  SiteSwapTest.h
+//  SiteSwapActionsTest.h
 //  Swapper
 //
-//  Created by Amiel Martin on 12/26/11.
+//  Created by Amiel Martin on 12/27/11.
 //  Copyright (c) 2011 Carnes Media. All rights reserved.
 //
 
@@ -10,23 +10,19 @@
 //  See Also: http://developer.apple.com/iphone/library/documentation/Xcode/Conceptual/iphone_development/135-Unit_Testing_Applications/unit_testing_applications.html
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "SiteSwap.h"
-#import "SiteSwapThing.h"
+#import "SiteSwapTest.h"
 
-@protocol SiteSwapTestWithPattern <NSObject>
-- (NSString*)site_swap_pattern;
-@end
-
-@interface SiteSwapTest : SenTestCase {
-  SiteSwap* site_swap;
+@interface SiteSwapActionsTest : SiteSwapTest {
+  NSString* actions;
 }
+
+- (void)setActions:(NSString*)input;
+
+@end
+
+@interface SiteSwap441ActionsTest : SiteSwapActionsTest <SiteSwapTestWithPattern>
 @end
 
 
-@interface SiteSwap441Test : SiteSwapTest <SiteSwapTestWithPattern>
+@interface SiteSwap55514ActionsTest : SiteSwapActionsTest <SiteSwapTestWithPattern>
 @end
-
-
-@interface SiteSwap55514Test : SiteSwapTest <SiteSwapTestWithPattern>
-@end
-
