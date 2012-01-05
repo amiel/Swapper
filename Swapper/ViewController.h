@@ -15,4 +15,9 @@
 @property (nonatomic, strong) IBOutlet UILabel* patternLabel;
 @property (nonatomic, strong) IBOutlet UILabel* statusLabel;
 @property (nonatomic, strong) NSArray* buttons;
+@property (nonatomic, strong) NSArray* labels;
+
+@property (nonatomic) BOOL showsCheats;
+
+- (IBAction)cheatValueChanged:sender;
 @end
