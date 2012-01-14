@@ -8,11 +8,12 @@
 
 #import "ViewController.h"
 #import "SiteSwapThing.h"
+#import "PatternChooserController.h"
 
 
 @implementation ViewController
 
-@synthesize site_swap = _site_swap;
+@synthesize site_swap = _site_swap, pattern = _pattern;
 @synthesize statusLabel = _statusLabel, patternLabel = _patternLabel;
 @synthesize buttons = _buttons, labels = _labels;
 @synthesize showsCheats = _showsCheats;
@@ -22,11 +23,10 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (void)setup {
+
+- (void)setupWithPattern:(NSString *)pattern {
   
-  // Recommended: 441, 55514, 531, 543
-  NSString* pattern = @"534";
-  
+  self.pattern = pattern;
   self.patternLabel.text = pattern;
   self.site_swap = [[SiteSwap alloc] initWithPattern:pattern];
   NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:_site_swap.period];
@@ -74,7 +74,7 @@
 
 - (void)reset {
   [self cleanup];
-  [self setup];
+  [self setupWithPattern:self.pattern];
 }
 
 
@@ -113,11 +113,24 @@
   _showsCheats = [sender isOn];
 }
 
+- (IBAction)showPatternController:(id)sender { 
+  PatternChooserController* controller = [[PatternChooserController alloc] init];
+  controller.delegate = self;
+  [self presentModalViewController:controller animated:YES];
+}
+
+- (void)chosePattern:(NSString *)pattern {
+  [self cleanup];
+  [self setupWithPattern:pattern];
+  [self.modalViewController dismissModalViewControllerAnimated:YES];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self setup];
+  NSString* startingPattern = [[PatternChooserController patterns] objectAtIndex:0];
+  [self setupWithPattern:startingPattern];
 }
 
 - (void)viewDidUnload {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1363737B14C11E430092D489 /* PatternChooserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1363737A14C11E430092D489 /* PatternChooserController.m */; };
 		1373253B14A956D700FA993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373253A14A956D700FA993D /* UIKit.framework */; };
 		1373253D14A956D700FA993D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373253C14A956D700FA993D /* Foundation.framework */; };
 		1373253F14A956D700FA993D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373253E14A956D700FA993D /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1363737914C11E430092D489 /* PatternChooserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternChooserController.h; sourceTree = "<group>"; };
+		1363737A14C11E430092D489 /* PatternChooserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternChooserController.m; sourceTree = "<group>"; };
 		1373253614A956D700FA993D /* Swapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373253A14A956D700FA993D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1373253C14A956D700FA993D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 				1373254F14A956D700FA993D /* MainStoryboard_iPad.storyboard */,
 				1373255214A956D700FA993D /* ViewController.h */,
 				1373255314A956D700FA993D /* ViewController.m */,
+				1363737914C11E430092D489 /* PatternChooserController.h */,
+				1363737A14C11E430092D489 /* PatternChooserController.m */,
 				1373254114A956D700FA993D /* Supporting Files */,
 			);
 			path = Swapper;
@@ -306,6 +311,7 @@
 				1373255414A956D700FA993D /* ViewController.m in Sources */,
 				1373257614A9577A00FA993D /* SiteSwap.m in Sources */,
 				1373257F14AA5E0C00FA993D /* SiteSwapThing.m in Sources */,
+				1363737B14C11E430092D489 /* PatternChooserController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
