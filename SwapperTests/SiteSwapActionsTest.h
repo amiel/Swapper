@@ -17,7 +17,7 @@
   BOOL lastReturn;
 }
 
-- (void)setActions:(NSString*)input;
+- (void)setButtonsPressed:(NSString*)input;
 
 - (void)verifyState:(BOOL)expectedReturn
         withCurrent:(NSUInteger)expectedCurrent

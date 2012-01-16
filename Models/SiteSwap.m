@@ -46,6 +46,9 @@
   return (NSUInteger)[c integerValue];
 }
 
+// TODO: Rename to something that makes more sense.
+//       I didn't want to use throw:(NSUInteger) since
+//       throw usually has to do with exceptions.
 - (BOOL)do:(NSUInteger)n {
   SiteSwapThing* thing = [_things objectAtIndex:n];
   if ([thing throws:self.currentThrow]) {

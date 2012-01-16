@@ -14,10 +14,13 @@
 #import "SiteSwapThing.h"
 
 @protocol SiteSwapTestWithPattern <NSObject>
+// Define site_swap_pattern to return a string with the site swap pattern
+// to be tested. The SiteSwap object will be available as site_swap;
 - (NSString*)site_swap_pattern;
 @end
 
 @interface SiteSwapTest : SenTestCase {
+  // Set by setUp using site_swap_pattern.
   SiteSwap* site_swap;
 }
 @end

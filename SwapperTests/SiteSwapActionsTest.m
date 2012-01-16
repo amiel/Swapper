@@ -10,7 +10,7 @@
 
 @implementation SiteSwapActionsTest
 
-- (void)setActions:(NSString*)input {
+- (void)setButtonsPressed:(NSString*)input {
   NSString* c; NSUInteger a;
   for (NSUInteger i = 0; i < [input length]; ++i) {
     c = [input substringWithRange:NSMakeRange(i, 1)];
@@ -58,39 +58,39 @@
 }
 
 - (void)testOneAction {
-  [self setActions:@"0"];
+  [self setButtonsPressed:@"0"];
   [self verifyState:YES withCurrent:1 andValues:3, 0, 0];
 }
 
 - (void)testTwoActions {
-  [self setActions:@"01"];
+  [self setButtonsPressed:@"01"];
   [self verifyState:YES withCurrent:2 andValues:2, 3, 0];
 }
 
 
 - (void)testThreeActions {
-  [self setActions:@"012"];
+  [self setButtonsPressed:@"012"];
   [self verifyState:YES withCurrent:0 andValues:1, 2, 0];
 }
 
 - (void)testFourActions {
-  [self setActions:@"0122"];
+  [self setButtonsPressed:@"0122"];
   [self verifyState:YES withCurrent:1 andValues:0, 1, 3];
 }
 
 
 - (void)testFourActionsIncorrect {
-  [self setActions:@"0120"];
+  [self setButtonsPressed:@"0120"];
   [self verifyState:NO withCurrent:0 andValues:0, 0, 0];
 }
 
 - (void)testFiveActions {
-  [self setActions:@"01220"];
+  [self setButtonsPressed:@"01220"];
   [self verifyState:YES withCurrent:2 andValues:3, 0, 2];
 }
 
 - (void)testIncorrectThenCorrect {
-  [self setActions:@"012001220"];
+  [self setButtonsPressed:@"012001220"];
   [self verifyState:YES withCurrent:2 andValues:3, 0, 2];
 }
 
@@ -115,23 +115,23 @@
 
 
 - (void)testOneAction {
-  [self setActions:@"0"];
+  [self setButtonsPressed:@"0"];
   [self verifyState:YES withCurrent:1 andValues:4, 0, 0, 0];
 }
 
 
 - (void)testManyActions {
-  [self setActions:@"012310213"];
+  [self setButtonsPressed:@"012310213"];
   [self verifyState:YES withCurrent:0 andValues:0, 1, 2, 3];
 }
 
 - (void)testManyMoreActions {
-  [self setActions:@"01231021301231"];
+  [self setButtonsPressed:@"01231021301231"];
   [self verifyState:YES withCurrent:2 andValues:0, 2, 1, 3];
 }
 
 - (void)testFailureAfterManyMoreActions {
-  [self setActions:@"012310213012313"];
+  [self setButtonsPressed:@"012310213012313"];
   [self verifyState:NO withCurrent:0 andValues:0, 0, 0, 0];
 }
 

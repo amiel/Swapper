@@ -20,5 +20,6 @@
 -(NSUInteger)period;
 -(NSUInteger)currentThrow;
 
+// TODO: Rename to something that makes more sense
 - (BOOL)do:(NSUInteger)n;
 @end
