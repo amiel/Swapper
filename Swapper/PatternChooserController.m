@@ -18,10 +18,15 @@ static NSArray* _patterns;
 + (NSArray*)patterns {
   if (!_patterns) {
     _patterns = [[NSArray alloc] initWithObjects:
+                 @"31",
+                 @"312",
                  @"531",
                  @"441",
+                 @"423",
+                 @"522",
                  @"55514",
                  @"534",
+                 @"719131",
                  nil];
   }
   return _patterns;
