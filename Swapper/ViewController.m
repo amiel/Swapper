@@ -12,11 +12,31 @@
 
 
 @implementation ViewController
+//
+//@synthesize site_swap = _site_swap, pattern = _pattern;
+//@synthesize statusLabel = _statusLabel, patternLabel = _patternLabel;
+//@synthesize buttons = _buttons, labels = _labels;
+//@synthesize showsCheats = _showsCheats;
 
-@synthesize site_swap = _site_swap, pattern = _pattern;
-@synthesize statusLabel = _statusLabel, patternLabel = _patternLabel;
-@synthesize buttons = _buttons, labels = _labels;
-@synthesize showsCheats = _showsCheats;
+static NSArray* _layouts;
+
++ (NSArray*)layouts {
+  if (!_layouts ) {
+    _layouts = @[
+      @[],
+      @[],
+      @[@[@60, @190], @[@180, @190]],
+      @[@[@60, @140], @[@180, @140],
+            @[@120, @240]],
+      @[@[@60, @140], @[@180, @140],
+        @[@60, @240], @[@180, @240]],
+      @[@[@60, @100], @[@180, @100],
+        @[@20, @200], @[@220, @200],
+            @[@120, @290]],
+    ];
+  }
+  return _layouts;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -29,6 +49,9 @@
   self.pattern = pattern;
   self.patternLabel.text = pattern;
   self.site_swap = [[SiteSwap alloc] initWithPattern:pattern];
+
+  NSArray* layout = [[self.class layouts] objectAtIndex:_site_swap.things.count];
+
   NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:_site_swap.period];
   NSMutableArray* labels = [[NSMutableArray alloc] initWithCapacity:_site_swap.period];
   [_site_swap.things enumerateObjectsUsingBlock:^(SiteSwapThing* thing, NSUInteger i, BOOL* stop) {
@@ -36,16 +59,16 @@
     //    NSString* buttonText = [NSString stringWithFormat:@"%d", thing.current];
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
     //    [button setTitle:buttonText forState:UIControlStateNormal];
-    float w = 50;
-    float h = 40;
-    float x = 20 + (i * (w + 10));
-    //    float x = 20 + ( (int)((280 - w) * i) % 280 );
+    float w = 80;
+    float h = 60;
+    float x = [[[layout objectAtIndex:i] objectAtIndex:0] floatValue];
+    float y = [[[layout objectAtIndex:i] objectAtIndex:1] floatValue];
     
-    button.frame = CGRectMake(x, 40, w, h);
+    button.frame = CGRectMake(x, y, w, h);
     [self.view addSubview:button];
     [buttons addObject:button];
     
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(x, 40 + h + 10, w, h)];
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(x, y - 40, w, h)];
     label.textAlignment = UITextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     [self.view addSubview:label];

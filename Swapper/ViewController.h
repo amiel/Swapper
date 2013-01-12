@@ -21,6 +21,8 @@
 
 @property (nonatomic) BOOL showsCheats;
 
++ (NSArray*)layouts;
+
 - (IBAction)cheatValueChanged:sender;
 - (void)setupWithPattern:(NSString*)pattern;
 
