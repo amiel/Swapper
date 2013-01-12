@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13087B9516A103B000E48C7C /* swappericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13087B9416A103B000E48C7C /* swappericon.png */; };
 		1363737B14C11E430092D489 /* PatternChooserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1363737A14C11E430092D489 /* PatternChooserController.m */; };
 		1373253B14A956D700FA993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373253A14A956D700FA993D /* UIKit.framework */; };
 		1373253D14A956D700FA993D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373253C14A956D700FA993D /* Foundation.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13087B9416A103B000E48C7C /* swappericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swappericon.png; path = ../swappericon.png; sourceTree = "<group>"; };
 		1363737914C11E430092D489 /* PatternChooserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternChooserController.h; sourceTree = "<group>"; };
 		1363737A14C11E430092D489 /* PatternChooserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternChooserController.m; sourceTree = "<group>"; };
 		1373253614A956D700FA993D /* Swapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		1373254014A956D700FA993D /* Swapper */ = {
 			isa = PBXGroup;
 			children = (
+				13087B9416A103B000E48C7C /* swappericon.png */,
 				1373257214A9570600FA993D /* Models */,
 				1373254914A956D700FA993D /* AppDelegate.h */,
 				1373254A14A956D700FA993D /* AppDelegate.m */,
@@ -272,6 +275,7 @@
 				1373254514A956D700FA993D /* InfoPlist.strings in Resources */,
 				1373254E14A956D700FA993D /* MainStoryboard_iPhone.storyboard in Resources */,
 				1373255114A956D700FA993D /* MainStoryboard_iPad.storyboard in Resources */,
+				13087B9516A103B000E48C7C /* swappericon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
